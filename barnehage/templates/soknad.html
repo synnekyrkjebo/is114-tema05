@@ -3,31 +3,31 @@
 {% block content %}
 <form method="POST" action="/behandle"> 
 	<label for="navn_forelder_1">Navn - Forelder 1:</label> 
-	<input type="text" id="navn_forelder_1" name="navn_forelder_1" />
+	<input type="text" id="navn_forelder_1" name="navn_forelder_1" required />
     <br> 
 	<label for="navn_forelder_2">Navn - Forelder 2:</label>
 	<input type="text" id="navn_forelder_2" name="navn_forelder_2" />
     <br> 
 	<label for="adresse_forelder_1">Adresse - Forelder 1:</label>
-	<input type="text" id="adresse_forelder_1" name="adresse_forelder_1" /><br>
+	<input type="text" id="adresse_forelder_1" name="adresse_forelder_1" required /><br>
 
 	<label for="adresse_forelder_2">Adresse - Forelder 2:</label> 
 	<input type="text" id="adresse_forelder_2" name="adresse_forelder_2" /><br>
 
 	<label for="tlf_nr_forelder_1">Telefonnummer - Forelder 1:</label> 
-	<input type="tel" id="tlf_nr_forelder_1" name="tlf_nr_forelder_1" /><br>
+	<input type="tel" id="tlf_nr_forelder_1" name="tlf_nr_forelder_1" required /><br>
 
 	<label for="tlf_nr_forelder_2">Telefonnummer - Forelder 2:</label> 
 	<input type="tel" id="tlf_nr_forelder_2" name="tlf_nr_forelder_2" /><br>
 
 	<label for="personnummer_forelder_1">Personnummer - Forelder 1:</label>
-	<input type="text" id="personnummer_forelder_1" name="personnummer_forelder_1" /><br>
+	<input type="text" id="personnummer_forelder_1" name="personnummer_forelder_1" required /><br>
 
 	<label for="personnummer_forelder_2">Personnummer - Forelder 2:</label> 
 	<input type="text" id="personnummer_forelder_2" name="personnummer_forelder_2" /><br>
 
 	<label for="personnummer_barnet_1">Personnummer - Barn 1:</label>
-	<input type="text" id="personnummer_barnet_1" name="personnummer_barnet_1" /><br>
+	<input type="text" id="personnummer_barnet_1" name="personnummer_barnet_1" required /><br>
 
 	<label for="personnummer_barnet_2">Personnummer - Barn 2:</label>
 	<input type="text" id="personnummer_barnet_2" name="personnummer_barnet_2" /><br>
@@ -47,7 +47,7 @@
 	</fieldset>
 	<br>
 	<label for="liste_over_barnehager_prioritert_5">Liste over Barnehager (Prioritert):</label>
-	<input type="text" id="liste_over_barnehager_prioritert_5" name="liste_over_barnehager_prioritert_5" /><br>
+	<input type="text" id="liste_over_barnehager_prioritert_5" name="liste_over_barnehager_prioritert_5" required/><br>
 
 	<label for="tidspunkt_for_oppstart">Tidspunkt for Oppstart:</label>
 	<input type="date" id="tidspunkt_for_oppstart" name="tidspunkt_for_oppstart" /><br>

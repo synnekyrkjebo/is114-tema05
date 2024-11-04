@@ -1,5 +1,12 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<p>Alle endringene er skrevet til dbexcel!</p>
+<h2>Permanent lagrede data</h2>
+
+{% for sheet_name, table_html in dataframes.items() %}
+    <h3>{{ sheet_name }}</h3>
+    <div>{{ table_html | safe }}</div>
+    <hr>
+{% endfor %}
+
 {% endblock %}

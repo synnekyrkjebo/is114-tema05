@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Oversikt over Søknader</h2>
+<table border="1">
+    <tr>
+        <th>Navn</th>
+        <th>Barnehage</th>
+        <th>Fortrinnsrett</th>
+        <th>Ledige Plasser</th>
+        <th>Status</th>
+    </tr>
+    {% for soknad in soknader %}
+    <tr>
+        <td>{{ soknad['navn'] }}</td>
+        <td>{{ soknad['barnehage'] }}</td>
+        <td>{{ "Ja" if soknad['fortrinnsrett'] else "Nei" }}</td>
+        <td>{{ "Ja" if soknad['ledige_plasser'] else "Nei" }}</td>
+        <td>{{ soknad['status'] }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}
