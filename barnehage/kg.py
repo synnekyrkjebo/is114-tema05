@@ -29,7 +29,7 @@ def behandle():
         print(sd)
         log = insert_soknad(form_to_object_soknad(sd))
         print(log)
-        data = pd.read_excel('/Users/synnekyrkjebo/IS-114/Oblig5/is114-tema05/barnehage/kgdata.xlsx', sheet_name='barnehage')
+        data = pd.read_excel('./kgdata.xlsx', sheet_name='barnehage')
         antall_ledige_plasser = data['barnehage_ledige_plasser'].sum()
         valgt_barnehage = sd.get('liste_over_barnehager_prioritert_5')
         har_fortrinnsrett = (
@@ -60,7 +60,7 @@ def svar():
 @app.route('/soknader')
 def soknader():
     # Les inn alle relevante ark fra Excel-filen
-    excel_data = pd.read_excel('/Users/synnekyrkjebo/IS-114/Oblig5/is114-tema05/barnehage/kgdata.xlsx', sheet_name=['barnehage', 'soknad', 'foresatt'])
+    excel_data = pd.read_excel('./kgdata.xlsx', sheet_name=['barnehage', 'soknad', 'foresatt'])
 
     # Hent DataFrames for hvert ark
     soknad_data = excel_data['soknad']
@@ -136,7 +136,7 @@ def statistikk():
 @app.route('/commit')
 def commit():
     # Les inn alle arkene fra Excel-filen som en ordbok med ark-navn som nøkler
-    excel_data = pd.read_excel('/Users/synnekyrkjebo/IS-114/Oblig5/is114-tema05/barnehage/kgdata.xlsx', sheet_name=None)
+    excel_data = pd.read_excel('./kgdata.xlsx', sheet_name=None)
 
     # Konverter hvert ark til en HTML-tabell
     dataframes = {sheet_name: data.to_html(index=False) for sheet_name, data in excel_data.items()}
